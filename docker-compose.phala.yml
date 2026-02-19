@@ -1,0 +1,39 @@
+# PhalaCloud deployment example
+# No build context — uses pre-built image from Docker Hub/GHCR
+# All configuration via environment variables (no .env files on PhalaCloud)
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: timewise
+      POSTGRES_USER: timewise
+      POSTGRES_PASSWORD: CHANGE_ME_STRONG_PASSWORD
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U timewise"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    image: your-registry/timewise:latest  # Replace with your image
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://timewise:CHANGE_ME_STRONG_PASSWORD@postgres:5432/timewise?schema=public
+      NEXTAUTH_SECRET: CHANGE_ME_RANDOM_SECRET_32_CHARS_MINIMUM
+      NEXTAUTH_URL: https://timewise.online
+      ADMIN_EMAIL: admin@timewise.online
+      ADMIN_PASSWORD: CHANGE_ME_ADMIN_PASSWORD
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

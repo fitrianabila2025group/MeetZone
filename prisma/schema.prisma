@@ -1,0 +1,179 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+enum AdProvider {
+  adsense
+  adsterra
+  monetag
+  hilltopads
+  custom
+}
+
+model User {
+  id           String     @id @default(cuid())
+  email        String     @unique
+  passwordHash String
+  name         String?
+  role         Role       @default(EDITOR)
+  isActive     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  auditLogs    AuditLog[]
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+}
+
+model Timezone {
+  id               String @id @default(cuid())
+  ianaName         String @unique
+  label            String
+  region           String
+  abbreviation     String @default("")
+  utcOffsetMinutes Int    @default(0)
+  cities           City[]
+}
+
+model City {
+  id          String  @id @default(cuid())
+  name        String
+  countryCode String
+  countryName String
+  slug        String  @unique
+  lat         Float   @default(0)
+  lng         Float   @default(0)
+  population  Int     @default(0)
+  isActive    Boolean @default(true)
+
+  timezoneId String
+  timezone   Timezone @relation(fields: [timezoneId], references: [id])
+
+  fromPairs PopularPair[] @relation("fromCity")
+  toPairs   PopularPair[] @relation("toCity")
+
+  fromFaqs FAQ[] @relation("faqFromCity")
+  toFaqs   FAQ[] @relation("faqToCity")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([countryCode])
+  @@index([timezoneId])
+}
+
+model PopularPair {
+  id         String @id @default(cuid())
+  fromCityId String
+  toCityId   String
+  slug       String @unique @default("")
+  priority   Int    @default(0)
+
+  fromCity City @relation("fromCity", fields: [fromCityId], references: [id], onDelete: Cascade)
+  toCity   City @relation("toCity", fields: [toCityId], references: [id], onDelete: Cascade)
+
+  @@unique([fromCityId, toCityId])
+  @@index([priority])
+}
+
+model SeoTemplate {
+  id         String   @id @default(cuid())
+  scope      String   // global, pair, city, meeting
+  titleTpl   String   @db.Text
+  metaTpl    String   @db.Text
+  introTpl   String   @db.Text
+  faqTplJson String   @default("[]") @db.Text
+  updatedAt  DateTime @updatedAt
+}
+
+model FAQ {
+  id         String  @id @default(cuid())
+  scope      String  // global, pair
+  pairSlug   String?
+  fromCityId String?
+  toCityId   String?
+  question   String  @db.Text
+  answer     String  @db.Text
+  sortOrder  Int     @default(0)
+  published  Boolean @default(true)
+
+  fromCity City? @relation("faqFromCity", fields: [fromCityId], references: [id], onDelete: Cascade)
+  toCity   City? @relation("faqToCity", fields: [toCityId], references: [id], onDelete: Cascade)
+
+  @@index([scope])
+  @@index([fromCityId, toCityId])
+}
+
+model InternalLinkBlock {
+  id         String   @id @default(cuid())
+  blockKey   String   @unique
+  linksJson  String   @default("[]") @db.Text
+  updatedAt  DateTime @updatedAt
+}
+
+model MeetingShare {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  cityIds     String    @db.Text // JSON array of city IDs
+  baseCityId  String
+  dateTimeISO String
+  createdAt   DateTime  @default(now())
+  expiresAt   DateTime?
+}
+
+model AdsSetting {
+  id               String     @id @default(cuid())
+  provider         AdProvider @default(custom)
+  adsenseClientId  String     @default("")
+  adsTxtLines      String     @default("") @db.Text
+  headHtml         String     @default("") @db.Text
+  bodyHtml         String     @default("") @db.Text
+  slotsJson        String     @default("{}") @db.Text
+  verificationMeta String     @default("")
+  updatedAt        DateTime   @updatedAt
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  entityType String
+  entityId   String?
+  details    String?  @db.Text
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([entityType])
+  @@index([createdAt])
+}
+
+model BlogPost {
+  id                 String    @id @default(cuid())
+  slug               String    @unique
+  title              String
+  excerpt            String    @default("") @db.Text
+  contentHtml        String    @db.Text
+  metaTitle          String?
+  metaDescription    String?
+  tags               String[]
+  readingTimeMinutes Int?
+  isPublished        Boolean   @default(false)
+  publishedAt        DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+}
