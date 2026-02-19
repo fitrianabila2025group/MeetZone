@@ -12,11 +12,11 @@ interface SiteSettings {
 }
 
 const settingFields = [
-  { key: 'siteName', label: 'Site Name', placeholder: 'TimeWise' },
-  { key: 'siteUrl', label: 'Site URL', placeholder: 'https://timewise.online' },
+  { key: 'siteName', label: 'Site Name', placeholder: 'MeetZone' },
+  { key: 'siteUrl', label: 'Site URL', placeholder: 'https://meetzone.es' },
   { key: 'siteDescription', label: 'Site Description', placeholder: 'Time Zone & Meeting Planner Hub' },
-  { key: 'twitterHandle', label: 'Twitter Handle', placeholder: '@timewise' },
-  { key: 'facebookUrl', label: 'Facebook URL', placeholder: 'https://facebook.com/timewise' },
+  { key: 'twitterHandle', label: 'Twitter Handle', placeholder: '@meetzone' },
+  { key: 'facebookUrl', label: 'Facebook URL', placeholder: 'https://facebook.com/meetzone' },
   { key: 'linkedinUrl', label: 'LinkedIn URL', placeholder: '' },
   { key: 'ga4Id', label: 'Google Analytics 4 ID', placeholder: 'G-XXXXXXXXXX' },
   { key: 'gscVerification', label: 'Google Search Console Verification', placeholder: '' },

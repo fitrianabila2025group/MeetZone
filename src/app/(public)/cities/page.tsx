@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'All Cities – Time Zone Directory | TimeWise',
+  title: 'All Cities – Time Zone Directory | MeetZone',
   description: 'Browse our directory of 300+ cities with their time zones. Find current time and convert between cities worldwide.',
   alternates: { canonical: '/cities' },
 };

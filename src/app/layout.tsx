@@ -22,8 +22,8 @@ async function getAdsAndSettings() {
 
 export async function generateMetadata(): Promise<Metadata> {
   const { ads, settings } = await getAdsAndSettings();
-  const siteName = settings.siteName || 'TimeWise';
-  const siteUrl = settings.siteUrl || process.env.SITE_URL || 'https://timewise.online';
+  const siteName = settings.siteName || 'MeetZone';
+  const siteUrl = settings.siteUrl || process.env.SITE_URL || 'https://meetzone.es';
   const description = settings.siteDescription || 'Time Zone Converter & Meeting Planner';
 
   const other: Record<string, string> = {};

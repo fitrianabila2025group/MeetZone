@@ -21,15 +21,15 @@ services:
       retries: 5
 
   app:
-    image: your-registry/timewise:latest  # Replace with your image
+    image: mpratamamail/meetzone:latest  # Replace with your image
     restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
       DATABASE_URL: postgresql://timewise:CHANGE_ME_STRONG_PASSWORD@postgres:5432/timewise?schema=public
       NEXTAUTH_SECRET: CHANGE_ME_RANDOM_SECRET_32_CHARS_MINIMUM
-      NEXTAUTH_URL: https://timewise.online
-      ADMIN_EMAIL: admin@timewise.online
+      NEXTAUTH_URL: https://meetzone.es
+      ADMIN_EMAIL: admin@meetzone.es
       ADMIN_PASSWORD: CHANGE_ME_ADMIN_PASSWORD
     depends_on:
       postgres:

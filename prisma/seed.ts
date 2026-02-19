@@ -468,7 +468,7 @@ const POPULAR_PAIRS: [string, string][] = [
 const SEO_TEMPLATES = [
   {
     scope: 'pair',
-    titleTpl: '{fromCity} to {toCity} Time Converter | TimeWise',
+    titleTpl: '{fromCity} to {toCity} Time Converter | MeetZone',
     metaTpl: 'Convert time between {fromCity}, {fromCountry} and {toCity}, {toCountry}. Current time difference, DST info, and meeting planner.',
     introTpl: 'Easily convert time between {fromCity} ({fromZone}) and {toCity} ({toZone}). See the current time difference, DST information, and find the best meeting times.',
     faqTplJson: JSON.stringify([
@@ -482,25 +482,25 @@ const SEO_TEMPLATES = [
   },
   {
     scope: 'global',
-    titleTpl: 'TimeWise — Time Zone Converter & Meeting Planner',
+    titleTpl: 'MeetZone — Time Zone Converter & Meeting Planner',
     metaTpl: 'Convert time between any two cities worldwide. Plan meetings across timezones with DST support.',
-    introTpl: 'TimeWise helps you convert time between cities and plan meetings across timezones.',
+    introTpl: 'MeetZone helps you convert time between cities and plan meetings across timezones.',
     faqTplJson: '[]',
   },
   {
     scope: 'meeting',
-    titleTpl: 'Meeting Planner | TimeWise',
+    titleTpl: 'Meeting Planner | MeetZone',
     metaTpl: 'Plan your next meeting across multiple timezones. Find the best time that works for everyone.',
-    introTpl: 'Use TimeWise Meeting Planner to find the perfect meeting time across different timezones.',
+    introTpl: 'Use MeetZone Meeting Planner to find the perfect meeting time across different timezones.',
     faqTplJson: '[]',
   },
 ];
 
 const GLOBAL_FAQS = [
-  { q: 'What is TimeWise?', a: 'TimeWise is a free online tool for converting time between cities and planning meetings across timezones. We support 300+ cities worldwide with accurate DST handling.' },
-  { q: 'Is TimeWise free to use?', a: 'Yes, TimeWise is completely free. We provide time zone conversion, meeting planning, and world clock features at no cost.' },
-  { q: 'Does TimeWise handle Daylight Saving Time?', a: 'Yes, TimeWise automatically accounts for DST (Daylight Saving Time) transitions using IANA timezone data, so you always get accurate time conversions.' },
-  { q: 'How many cities does TimeWise support?', a: 'TimeWise supports 300+ major cities across all continents, covering all major timezones.' },
+  { q: 'What is MeetZone?', a: 'MeetZone is a free online tool for converting time between cities and planning meetings across timezones. We support 300+ cities worldwide with accurate DST handling.' },
+  { q: 'Is MeetZone free to use?', a: 'Yes, MeetZone is completely free. We provide time zone conversion, meeting planning, and world clock features at no cost.' },
+  { q: 'Does MeetZone handle Daylight Saving Time?', a: 'Yes, MeetZone automatically accounts for DST (Daylight Saving Time) transitions using IANA timezone data, so you always get accurate time conversions.' },
+  { q: 'How many cities does MeetZone support?', a: 'MeetZone supports 300+ major cities across all continents, covering all major timezones.' },
   { q: 'Can I share meeting times?', a: 'Yes! Use our Meeting Planner to create a shareable link with meeting details across multiple timezones.' },
   { q: 'How do I add a city to the world clock?', a: 'Visit the World Clock page and use the search to add up to 12 cities to your personalized world clock.' },
 ];
@@ -530,7 +530,7 @@ Coordinated Universal Time (UTC) is the primary time standard by which the world
 
 1. **Use IANA timezone names** (like "America/New_York") rather than abbreviations
 2. **Always consider DST** when scheduling future events
-3. **Use tools like TimeWise** to automatically handle conversions
+3. **Use tools like MeetZone** to automatically handle conversions
 4. **Schedule meetings during overlapping business hours** when possible`,
     isPublished: true,
     publishedAt: new Date(),
@@ -565,7 +565,7 @@ DST can change the time difference between cities. For example, New York to Lond
 
 1. Always use timezone-aware datetime libraries
 2. Store dates in UTC and convert for display
-3. Use TimeWise to automatically handle DST transitions`,
+3. Use MeetZone to automatically handle DST transitions`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -598,7 +598,7 @@ For US West Coast to Asia:
 
 ## Strategy 3: Use Tools
 
-TimeWise's Meeting Planner helps you visualize overlap between multiple cities and find the best times automatically.
+MeetZone's Meeting Planner helps you visualize overlap between multiple cities and find the best times automatically.
 
 ## Best Practices
 
@@ -638,7 +638,7 @@ Add cities where your key contacts are located:
 - Group related timezones together
 - Note which cities observe DST
 - Check the clock before sending "urgent" messages
-- Use TimeWise's World Clock feature for a clean, always-updated display`,
+- Use MeetZone's World Clock feature for a clean, always-updated display`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -670,9 +670,9 @@ IANA uses the format "Area/Location", for example:
 3. **Historical accuracy**: Contains historical timezone data
 4. **Widely supported**: Used by all major operating systems and programming languages
 
-## How TimeWise Uses IANA Data
+## How MeetZone Uses IANA Data
 
-TimeWise uses IANA timezone identifiers to ensure accurate conversions, including proper handling of DST transitions throughout the year.`,
+MeetZone uses IANA timezone identifiers to ensure accurate conversions, including proper handling of DST transitions throughout the year.`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -738,7 +738,7 @@ UTC is the primary time standard used worldwide. It is based on International At
 
 ## Which Should You Use?
 
-For technical purposes (programming, databases), always use UTC. For casual conversation, both are acceptable. TimeWise uses UTC as the internal reference and converts to local times for display.`,
+For technical purposes (programming, databases), always use UTC. For casual conversation, both are acceptable. MeetZone uses UTC as the internal reference and converts to local times for display.`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -765,7 +765,7 @@ The IDL zigzags to avoid splitting countries or island groups into two different
 
 ## Practical Impact
 
-When scheduling meetings between cities on opposite sides of the IDL (e.g., Tokyo and Los Angeles), be extra careful with dates. TimeWise handles this automatically, showing both the time and the date difference.`,
+When scheduling meetings between cities on opposite sides of the IDL (e.g., Tokyo and Los Angeles), be extra careful with dates. MeetZone handles this automatically, showing both the time and the date difference.`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -810,7 +810,7 @@ Establish and communicate your working hours clearly. Stick to them.
 
 Use "follow-the-sun" workflows where work progresses across timezones.
 
-## 9. Use TimeWise
+## 9. Use MeetZone
 
 Keep a world clock visible and use the meeting planner for scheduling.
 
@@ -838,7 +838,7 @@ Time zone converters are simple tools, but knowing how to use them effectively c
 
 ## Pro Tips
 
-1. **Bookmark your frequent conversions** on TimeWise
+1. **Bookmark your frequent conversions** on MeetZone
 2. **Check the DST indicator** before scheduling future events
 3. **Use the meeting planner** for multi-city coordination
 4. **Share conversion links** with meeting participants
@@ -850,7 +850,7 @@ For critical events (flights, live broadcasts, trading), always:
 - Convert using IANA timezone names
 - Verify DST status for both locations
 - Include the date with the time
-- Use a trusted converter like TimeWise`,
+- Use a trusted converter like MeetZone`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -893,7 +893,7 @@ The trend is moving away from DST. The European Union considered ending DST in 2
 
 ## How This Affects You
 
-When converting time to/from countries without DST, the time difference may change seasonally if YOUR country observes DST. Use TimeWise to always get the correct current difference.`,
+When converting time to/from countries without DST, the time difference may change seasonally if YOUR country observes DST. Use MeetZone to always get the correct current difference.`,
     isPublished: true,
     publishedAt: new Date(),
     tags: [],
@@ -929,7 +929,7 @@ The Pacific spans the largest time differences, making scheduling particularly c
 3. **Use a middle-ground timezone** (e.g., Hawaii) as a reference
 4. **Consider splitting into regional pods** with async handoffs
 
-## Use TimeWise
+## Use MeetZone
 
 Our meeting planner visually shows overlap windows, making it easy to find the rare sweet spots for trans-Pacific meetings.`,
     isPublished: true,
@@ -943,7 +943,7 @@ async function main() {
   console.log('🌱 Starting seed...');
 
   // 1. Admin user
-  const email = process.env.ADMIN_EMAIL || 'admin@timewise.online';
+  const email = process.env.ADMIN_EMAIL || 'admin@meetzone.es';
   const password = process.env.ADMIN_PASSWORD || 'Anonymous263';
   const passwordHash = await hash(password, 12);
 
@@ -955,10 +955,10 @@ async function main() {
   console.log(`✅ Admin user: ${email}`);
 
   // 2. Site settings
-  const siteUrl = process.env.SITE_URL || 'https://timewise.online';
+  const siteUrl = process.env.SITE_URL || 'https://meetzone.es';
   const defaultSettings: Record<string, string> = {
     siteUrl,
-    siteName: 'TimeWise',
+    siteName: 'MeetZone',
     siteDescription: 'Time Zone Converter & Meeting Planner',
     socialTwitter: '',
     socialFacebook: '',

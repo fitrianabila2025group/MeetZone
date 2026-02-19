@@ -26,13 +26,13 @@ export async function GET(
 
   const ics = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//TimeWise//Meeting Planner//EN
+PRODID:-//MeetZone//Meeting Planner//EN
 BEGIN:VEVENT
 DTSTART:${formatICSDate(meetingDate)}
 DTEND:${formatICSDate(endDate)}
 SUMMARY:Meeting - ${cities.map((c: any) => c.name).join(', ')}
 DESCRIPTION:Meeting across ${cities.length} cities: ${cities.map((c: any) => c.name).join(', ')}
-UID:${meeting.slug}@timewise.online
+UID:${meeting.slug}@meetzone.es
 END:VEVENT
 END:VCALENDAR`;
 

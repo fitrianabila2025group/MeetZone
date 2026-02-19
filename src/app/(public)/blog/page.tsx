@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'Blog – Time Zone Tips & Guides | TimeWise',
+  title: 'Blog – Time Zone Tips & Guides | MeetZone',
   description: 'Learn about time zones, daylight saving time, international scheduling, and productivity tips for remote teams.',
   alternates: { canonical: '/blog' },
 };

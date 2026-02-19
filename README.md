@@ -1,8 +1,8 @@
-# TimeWise – Time Zone & Meeting Planner Hub
+# MeetZone – Time Zone & Meeting Planner Hub
 
 A production-ready time zone converter and meeting planner built with Next.js 14, TypeScript, Tailwind CSS, PostgreSQL, and Prisma.
 
-**Live:** [https://timewise.online](https://timewise.online)
+**Live:** [https://meetzone.es](https://meetzone.es)
 
 ## Features
 
@@ -39,8 +39,8 @@ A production-ready time zone converter and meeting planner built with Next.js 14
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-org/TimeWise.git
-cd TimeWise
+git clone https://github.com/your-org/MeetZone.git
+cd MeetZone
 npm install
 ```
 
@@ -58,7 +58,7 @@ cp .env.example .env
 # Just ensure DATABASE_URL in .env points to your instance
 
 # Option B: Use Docker
-docker run -d --name timewise-pg \
+docker run -d --name meetzone-pg \
   -e POSTGRES_DB=timewise \
   -e POSTGRES_USER=timewise \
   -e POSTGRES_PASSWORD=timewise \
@@ -86,7 +86,7 @@ Open [http://localhost:3000](http://localhost:3000)
 Navigate to [http://localhost:3000/admin/login](http://localhost:3000/admin/login)
 
 Default credentials (from .env):
-- **Email:** `admin@timewise.online`
+- **Email:** `admin@meetzone.es`
 - **Password:** `admin123`
 
 ## Docker Deployment
@@ -99,7 +99,7 @@ docker-compose up -d --build
 
 This starts:
 - PostgreSQL 16 on port 5432
-- TimeWise app on port 3000
+- MeetZone app on port 3000
 
 The app automatically runs migrations and seeds the database on first start.
 
@@ -107,14 +107,13 @@ The app automatically runs migrations and seeds the database on first start.
 
 1. Build and push your Docker image:
 ```bash
-docker build -t your-registry/timewise:latest .
-docker push your-registry/timewise:latest
+docker build -t mpratamamail/meetzone:latest .
+docker push mpratamamail/meetzone:latest
 ```
 
 2. Use `docker-compose.phala.yml` as your compose template:
-   - Replace `your-registry/timewise:latest` with your image
    - Update all `CHANGE_ME_*` values
-   - Set `NEXTAUTH_URL` to your domain
+   - Set `NEXTAUTH_URL` to your domain (`https://meetzone.es`)
 
 **Important:** PhalaCloud does not support `.env` files. All configuration must be in the compose YAML `environment` block.
 
@@ -124,7 +123,7 @@ docker push your-registry/timewise:latest
 |----------|----------|-------------|
 | `DATABASE_URL` | Yes | PostgreSQL connection string |
 | `NEXTAUTH_SECRET` | Yes | Random string (32+ chars) for JWT signing |
-| `NEXTAUTH_URL` | Yes | Public URL (e.g., `https://timewise.online`) |
+| `NEXTAUTH_URL` | Yes | Public URL (e.g., `https://meetzone.es`) |
 | `ADMIN_EMAIL` | Yes | Initial admin user email |
 | `ADMIN_PASSWORD` | Yes | Initial admin user password |
 

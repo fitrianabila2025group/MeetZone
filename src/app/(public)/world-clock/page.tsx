@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { WorldClockClient } from '@/components/world-clock-client';
 
 export const metadata: Metadata = {
-  title: 'World Clock – Current Time in Major Cities | TimeWise',
+  title: 'World Clock – Current Time in Major Cities | MeetZone',
   description: 'See the current time in cities around the world. Add up to 12 cities to your personal world clock dashboard.',
   alternates: { canonical: '/world-clock' },
 };

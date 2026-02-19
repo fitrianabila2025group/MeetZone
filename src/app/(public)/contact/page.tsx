@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | TimeWise',
-  description: 'Get in touch with the TimeWise team. Send us feedback, report bugs, or ask questions about our time zone tools.',
+  title: 'Contact Us | MeetZone',
+  description: 'Get in touch with the MeetZone team. Send us feedback, report bugs, or ask questions about our time zone tools.',
   alternates: { canonical: '/contact' },
 };
 
@@ -17,7 +17,7 @@ export default function ContactPage() {
 
         <h2>Get in Touch</h2>
         <p>
-          Send us an email at: <a href="mailto:support@timewise.online">support@timewise.online</a>
+          Send us an email at: <a href="mailto:support@meetzone.es">support@meetzone.es</a>
         </p>
 
         <h2>Report a Bug</h2>
@@ -33,7 +33,7 @@ export default function ContactPage() {
 
         <h2>Feature Requests</h2>
         <p>
-          Have an idea for a feature? We&apos;re always looking to improve TimeWise. Send your suggestions to our email above.
+          Have an idea for a feature? We&apos;re always looking to improve MeetZone. Send your suggestions to our email above.
         </p>
       </div>
     </main>

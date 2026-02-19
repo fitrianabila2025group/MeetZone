@@ -30,7 +30,7 @@ export default async function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'TimeWise',
+    name: 'MeetZone',
     url: siteUrl,
     description: 'Free time zone converter and meeting planner for global teams.',
     potentialAction: {

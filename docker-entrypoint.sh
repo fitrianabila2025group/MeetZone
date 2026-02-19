@@ -2,7 +2,7 @@
 set -e
 
 echo "================================================"
-echo "  TimeWise - Time Zone & Meeting Planner Hub"
+echo "  MeetZone - Time Zone & Meeting Planner Hub"
 echo "================================================"
 echo ""
 
@@ -57,6 +57,6 @@ SQL
   echo ""
 fi
 
-echo "🚀 Starting TimeWise server on port ${PORT:-3000}..."
+echo "🚀 Starting MeetZone server on port ${PORT:-3000}..."
 echo ""
 exec node server.js

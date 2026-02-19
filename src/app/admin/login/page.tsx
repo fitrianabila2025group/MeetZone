@@ -36,7 +36,7 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm">
         <CardContent className="pt-6">
-          <h1 className="text-2xl font-bold text-center mb-6">TimeWise Admin</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">MeetZone Admin</h1>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <Label htmlFor="email">Email</Label>

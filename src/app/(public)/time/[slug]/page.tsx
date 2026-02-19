@@ -168,7 +168,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const title = template
       ? applyTemplate(template.titleTpl, vars)
-      : `${fromCity.name} to ${toCity.name} Time Converter | TimeWise`;
+      : `${fromCity.name} to ${toCity.name} Time Converter | MeetZone`;
     const description = template
       ? applyTemplate(template.metaTpl, vars)
       : `Convert time between ${fromCity.name} and ${toCity.name}. DST-aware time zone converter.`;
@@ -187,7 +187,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const cityData = await getCityData(citySlug);
     if (cityData) {
       const { city } = cityData;
-      const title = `Current Time in ${city.name}, ${city.countryName} | TimeWise`;
+      const title = `Current Time in ${city.name}, ${city.countryName} | MeetZone`;
       const description = `What time is it in ${city.name}? Current local time, timezone (${city.timezone.abbreviation}, ${getUtcOffsetString(new Date(), city.timezone.ianaName)}), DST info, and time converter.`;
 
       return {
@@ -558,7 +558,7 @@ async function PairPageContent({ data, slug }: { data: NonNullable<Awaited<Retur
     {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
-      name: 'TimeWise Time Zone Converter',
+      name: 'MeetZone Time Zone Converter',
       applicationCategory: 'UtilityApplication',
       operatingSystem: 'Web',
       url: `${siteUrl}/time/${slug}`,

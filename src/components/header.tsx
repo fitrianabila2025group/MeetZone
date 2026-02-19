@@ -39,7 +39,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
         <Link href="/" className="flex items-center space-x-2">
           <Clock className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold">TimeWise</span>
+          <span className="text-xl font-bold">MeetZone</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {NAV_LINKS.map(link => (

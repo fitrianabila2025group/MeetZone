@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Advertising Policy | TimeWise',
-  description: 'Learn about how TimeWise displays advertisements and works with advertising partners.',
+  title: 'Advertising Policy | MeetZone',
+  description: 'Learn about how MeetZone displays advertisements and works with advertising partners.',
   alternates: { canonical: '/ads-policy' },
 };
 
@@ -15,7 +15,7 @@ export default function AdsPolicyPage() {
 
         <h2>How We Use Advertising</h2>
         <p>
-          TimeWise is a free service supported by advertising. Ads help us keep our time zone tools free for everyone.
+          MeetZone is a free service supported by advertising. Ads help us keep our time zone tools free for everyone.
         </p>
 
         <h2>Advertising Partners</h2>
@@ -49,7 +49,7 @@ export default function AdsPolicyPage() {
 
         <h2>Contact</h2>
         <p>
-          For questions about our advertising practices, please contact us at <a href="mailto:support@timewise.online">support@timewise.online</a>.
+          For questions about our advertising practices, please contact us at <a href="mailto:support@meetzone.es">support@meetzone.es</a>.
         </p>
       </div>
     </main>

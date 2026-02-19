@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
-  title: 'All Time Zones – IANA Time Zone List | TimeWise',
+  title: 'All Time Zones – IANA Time Zone List | MeetZone',
   description: 'Browse all IANA time zones with their UTC offsets, abbreviations, and cities. Find and compare time zones worldwide.',
   alternates: { canonical: '/timezones' },
 };

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | TimeWise',
-  description: 'TimeWise terms of service. Read about the terms and conditions governing use of our time zone conversion tools.',
+  title: 'Terms of Service | MeetZone',
+  description: 'MeetZone terms of service. Read about the terms and conditions governing use of our time zone conversion tools.',
   alternates: { canonical: '/terms' },
 };
 
@@ -15,13 +15,13 @@ export default function TermsPage() {
 
         <h2>1. Acceptance of Terms</h2>
         <p>
-          By accessing and using TimeWise (&quot;the Service&quot;), you agree to be bound by these Terms of Service.
+          By accessing and using MeetZone (&quot;the Service&quot;), you agree to be bound by these Terms of Service.
           If you do not agree to these terms, please do not use the Service.
         </p>
 
         <h2>2. Description of Service</h2>
         <p>
-          TimeWise provides free online tools for time zone conversion, world clock display, and meeting planning.
+          MeetZone provides free online tools for time zone conversion, world clock display, and meeting planning.
           The Service is provided &quot;as is&quot; without warranties of any kind.
         </p>
 
@@ -43,12 +43,12 @@ export default function TermsPage() {
 
         <h2>5. Intellectual Property</h2>
         <p>
-          The Service&apos;s content, features, and functionality are owned by TimeWise and are protected by international copyright, trademark, and other intellectual property laws.
+          The Service&apos;s content, features, and functionality are owned by MeetZone and are protected by international copyright, trademark, and other intellectual property laws.
         </p>
 
         <h2>6. Limitation of Liability</h2>
         <p>
-          TimeWise shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the Service.
+          MeetZone shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the Service.
           This includes but is not limited to damages arising from missed meetings, incorrect time conversions, or scheduling errors.
         </p>
 
@@ -64,7 +64,7 @@ export default function TermsPage() {
 
         <h2>9. Contact</h2>
         <p>
-          For questions about these Terms, please contact us at <a href="mailto:support@timewise.online">support@timewise.online</a>.
+          For questions about these Terms, please contact us at <a href="mailto:support@meetzone.es">support@meetzone.es</a>.
         </p>
       </div>
     </main>

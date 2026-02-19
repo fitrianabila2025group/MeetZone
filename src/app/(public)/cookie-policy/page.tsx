@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | TimeWise',
-  description: 'Learn about how TimeWise uses cookies and similar technologies.',
+  title: 'Cookie Policy | MeetZone',
+  description: 'Learn about how MeetZone uses cookies and similar technologies.',
   alternates: { canonical: '/cookie-policy' },
 };
 
@@ -56,7 +56,7 @@ export default function CookiePolicyPage() {
 
         <h2>Contact</h2>
         <p>
-          For questions about our use of cookies, please contact us at <a href="mailto:support@timewise.online">support@timewise.online</a>.
+          For questions about our use of cookies, please contact us at <a href="mailto:support@meetzone.es">support@meetzone.es</a>.
         </p>
       </div>
     </main>

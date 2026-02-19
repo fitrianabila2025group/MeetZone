@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | TimeWise',
-  description: 'TimeWise privacy policy. Learn how we collect, use, and protect your data.',
+  title: 'Privacy Policy | MeetZone',
+  description: 'MeetZone privacy policy. Learn how we collect, use, and protect your data.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
 
         <h2>1. Information We Collect</h2>
         <p>
-          TimeWise collects minimal information to provide our services:
+          MeetZone collects minimal information to provide our services:
         </p>
         <ul>
           <li><strong>Usage Data</strong> – We may collect anonymous usage statistics such as pages viewed, features used, and general geographic region.</li>
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
 
         <h2>8. Contact</h2>
         <p>
-          For privacy-related questions, please contact us at <a href="mailto:support@timewise.online">support@timewise.online</a>.
+          For privacy-related questions, please contact us at <a href="mailto:support@meetzone.es">support@meetzone.es</a>.
         </p>
       </div>
     </main>

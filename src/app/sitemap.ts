@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrlSetting = await prisma.siteSetting.findUnique({ where: { key: 'siteUrl' } });
-  const baseUrl = siteUrlSetting?.value || 'https://timewise.online';
+  const baseUrl = siteUrlSetting?.value || 'https://meetzone.es';
 
   // Count pairs for pagination
   const pairCount = await prisma.popularPair.count();

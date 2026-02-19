@@ -27,7 +27,7 @@ services:
       DATABASE_URL: postgresql://timewise:timewise_secret_change_me@postgres:5432/timewise?schema=public
       NEXTAUTH_SECRET: change-this-to-a-random-secret-at-least-32-chars
       NEXTAUTH_URL: http://localhost:3000
-      ADMIN_EMAIL: admin@timewise.online
+      ADMIN_EMAIL: admin@meetzone.es
       ADMIN_PASSWORD: admin123
     depends_on:
       postgres:

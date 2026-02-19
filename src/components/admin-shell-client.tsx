@@ -55,7 +55,7 @@ function AdminShellInner({ children }: { children: React.ReactNode }) {
       >
         <div className="flex items-center justify-between h-14 px-4 border-b">
           <Link href="/admin/dashboard" className="font-bold text-lg">
-            ⏰ TimeWise
+            ⏰ MeetZone
           </Link>
           <button
             className="lg:hidden p-1 rounded hover:bg-accent"

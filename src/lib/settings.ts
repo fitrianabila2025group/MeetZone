@@ -26,7 +26,7 @@ export async function getSetting(key: string, fallback = ''): Promise<string> {
 }
 
 export async function getSiteUrl(): Promise<string> {
-  return getSetting('siteUrl', process.env.SITE_URL || 'https://timewise.online');
+  return getSetting('siteUrl', process.env.SITE_URL || 'https://meetzone.es');
 }
 
 export function invalidateSettingsCache() {

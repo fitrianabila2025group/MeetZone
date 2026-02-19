@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
   if (!post) return {};
   return {
-    title: post.metaTitle || `${post.title} | TimeWise Blog`,
+    title: post.metaTitle || `${post.title} | MeetZone Blog`,
     description: post.metaDescription || post.excerpt || '',
     alternates: { canonical: `/blog/${post.slug}` },
   };
@@ -59,8 +59,8 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.excerpt || '',
     datePublished: post.publishedAt?.toISOString(),
     dateModified: post.updatedAt.toISOString(),
-    author: { '@type': 'Organization', name: 'TimeWise' },
-    publisher: { '@type': 'Organization', name: 'TimeWise' },
+    author: { '@type': 'Organization', name: 'MeetZone' },
+    publisher: { '@type': 'Organization', name: 'MeetZone' },
   };
 
   return (

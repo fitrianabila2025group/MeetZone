@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Clock className="h-5 w-5 text-primary" />
-              <span className="font-bold">TimeWise</span>
+              <span className="font-bold">MeetZone</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Free time zone converter and meeting planner for global teams.
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-4 border-t text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} TimeWise. All rights reserved.
+          © {new Date().getFullYear()} MeetZone. All rights reserved.
         </div>
       </div>
     </footer>

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About TimeWise – Your Time Zone & Meeting Planner Hub',
-  description: 'Learn about TimeWise, the free online tool for time zone conversion, world clock, and meeting planning across time zones.',
+  title: 'About MeetZone – Your Time Zone & Meeting Planner Hub',
+  description: 'Learn about MeetZone, the free online tool for time zone conversion, world clock, and meeting planning across time zones.',
   alternates: { canonical: '/about' },
 };
 
@@ -10,10 +10,10 @@ export default function AboutPage() {
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto prose prose-neutral dark:prose-invert">
-        <h1>About TimeWise</h1>
+        <h1>About MeetZone</h1>
         <p>
-          TimeWise is your go-to hub for all things related to time zones. Whether you&apos;re scheduling a meeting across continents,
-          checking the current time in another city, or figuring out the best overlap window for your remote team, TimeWise has you covered.
+          MeetZone is your go-to hub for all things related to time zones. Whether you&apos;re scheduling a meeting across continents,
+          checking the current time in another city, or figuring out the best overlap window for your remote team, MeetZone has you covered.
         </p>
 
         <h2>Our Mission</h2>
@@ -33,7 +33,7 @@ export default function AboutPage() {
 
         <h2>Accuracy</h2>
         <p>
-          TimeWise uses the IANA Time Zone Database, the global standard maintained by the Internet Assigned Numbers Authority.
+          MeetZone uses the IANA Time Zone Database, the global standard maintained by the Internet Assigned Numbers Authority.
           All conversions account for Daylight Saving Time (DST) transitions automatically.
         </p>
 
