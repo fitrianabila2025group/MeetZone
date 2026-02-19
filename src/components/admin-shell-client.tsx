@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { signOut, useSession } from 'next-auth/react';
+import { SessionProvider, signOut, useSession } from 'next-auth/react';
 import {
   LayoutDashboard, Globe, MapPin, Link2, FileText, MessageSquare,
   Settings, Users, Shield, BarChart3, Menu, X, LogOut, Megaphone, Clock,
@@ -25,6 +25,14 @@ const navItems = [
 ];
 
 export function AdminShellClient({ children }: { children: React.ReactNode }) {
+  return (
+    <SessionProvider>
+      <AdminShellInner>{children}</AdminShellInner>
+    </SessionProvider>
+  );
+}
+
+function AdminShellInner({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { data: session } = useSession();
